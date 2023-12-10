@@ -14,7 +14,11 @@ const TodoListContextProvider = ({children}) => {
         setTodos([...todos, {text: todo, id: Math.random()}])
     }
 
-    const values = {todos, addTodo}
+    const removeTodo = (todoId) => {
+        setTodos(todos.filter(todo => todo.id !== todoId))
+    }
+
+    const values = {todos, addTodo, removeTodo}
 
     return (
         <TodoListContext.Provider value={values}>

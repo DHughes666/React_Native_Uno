@@ -6,7 +6,7 @@ import AddToDo from "./addTodo";
 const TodoList = () => {
     const {isDarkTheme, lightTheme, 
         darkTheme, changeTheme} = useContext(ThemeContext)
-    const {todos} = useContext(TodoListContext);
+    const {todos, removeTodo} = useContext(TodoListContext);
     const theme = isDarkTheme ? darkTheme : lightTheme;
 
     return (
@@ -15,7 +15,10 @@ const TodoList = () => {
             {
                 todos.length ? (
                     todos.map((todo) => (
-                <p className="item" key={todo.id}>{todo.text}</p>
+                        <p className="item" key={todo.id}>
+                            {todo.text}{' '} 
+                            <button onClick={() => removeTodo(todo.id)}>Remove Item</button>
+                        </p>
             ))
                 ) : (
                     <div>You have no todos</div>
