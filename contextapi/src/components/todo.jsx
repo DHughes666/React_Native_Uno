@@ -5,7 +5,7 @@ class TodoList extends React.Component {
     static contextType = ThemeContext
 
     render() {
-        const {isDarkTheme, lightTheme, darkTheme} = this.context;
+        const {isDarkTheme, lightTheme, darkTheme, changeTheme} = this.context;
         const theme = isDarkTheme ? darkTheme : lightTheme;
         return (
             <div style={{background: theme.backgroundColor,
@@ -13,6 +13,10 @@ class TodoList extends React.Component {
                 <p className="item">Plan the family trip</p>
                 <p className="item">Go shopping for dinner</p>
                 <p className="item">Go for a walk</p>
+                <button type="button" className="ui button primary" 
+                    onClick={changeTheme}>
+                    change the theme
+                </button>
             </div>
         )
     }
