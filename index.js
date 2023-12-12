@@ -1,14 +1,16 @@
 /* eslint-disable prettier/prettier */
 // Import libraries
 import React from 'react';
-import {Text, AppRegistry} from 'react-native';
+import {AppRegistry} from 'react-native';
 import Header from './src/components/Header';
+import CarList from './src/components/CarList';
 
 // Create component
 const App = () => {
   return (
     <>
-        <Header />
+        <Header title={'Cars'}/>
+        <CarList />
     </>
   );
 };

@@ -4,11 +4,11 @@ import React from 'react';
 import {Text, View} from 'react-native';
 
 // Create component
-const Header = () => {
+const Header = ({title}) => {
     const {textStyling, viewStyle} = styles;
     return (
         <View style={viewStyle}>
-            <Text style={textStyling}>Cars</Text>
+            <Text style={textStyling}>{title}</Text>
         </View>
     );
 };
