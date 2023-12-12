@@ -1,9 +1,12 @@
-/**
- * @format
- */
+/* eslint-disable prettier/prettier */
+// Import libraries
+import React from 'react';
+import {Text, AppRegistry} from 'react-native';
 
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
+// Create component
+const App = () => {
+  return <Text>Hi there</Text>;
+};
 
-AppRegistry.registerComponent(appName, () => App);
+//render component to screen
+AppRegistry.registerComponent('cars', () => App);
