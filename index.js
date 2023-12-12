@@ -2,10 +2,15 @@
 // Import libraries
 import React from 'react';
 import {Text, AppRegistry} from 'react-native';
+import Header from './src/components/Header';
 
 // Create component
 const App = () => {
-  return <Text>Hi there</Text>;
+  return (
+    <>
+        <Header />
+    </>
+  );
 };
 
 //render component to screen
