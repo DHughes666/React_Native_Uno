@@ -1,14 +1,37 @@
 /* eslint-disable prettier/prettier */
 // Import libraries
-import React from 'react';
+import React, {Component} from 'react';
 import {Text, View} from 'react-native';
+import axios from 'axios';
 
-const CarList = () => {
-    return (
-        <View>
-            <Text>Car List</Text>
-        </View>
-    );
-};
+class CarList extends Component {
+    constructor(){
+        super();
+        this.state = {productList: []};
+    }
+
+    componentDidMount() {
+        axios('https://course-api.com/react-store-products')
+            .then((resp) => {
+                this.setState({productList: resp.data});
+                console.log('success');
+            })
+            .catch((err) => console.log(err));
+    }
+
+    renderList = () => {
+        return this.state.productList.map((item) => {
+            return <Text key={item.id}>{item.name}</Text>;
+        });
+    };
+
+    render() {
+        return (
+            <View>
+                {this.renderList()}
+            </View>
+        );
+    }
+}
 
 export default CarList;
