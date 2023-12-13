@@ -1,12 +1,12 @@
 /* eslint-disable prettier/prettier */
 // Import libraries
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 
 
 const Item = ({children}) => {
     return <View style={styles.viewStyle}>
-        <Text>{children}</Text>
+        {children}
     </View>;
 };
 

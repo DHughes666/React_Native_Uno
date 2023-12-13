@@ -23,7 +23,7 @@ class CarList extends Component {
 
     renderList = () => {
         return this.state.productList.map((item) => {
-            return <ProductDetail key={item.id} name={item.name} />;
+            return <ProductDetail key={item.id} product={item} />;
         });
     };
 
