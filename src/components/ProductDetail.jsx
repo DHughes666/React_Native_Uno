@@ -4,6 +4,7 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 import Item from './item';
 import ItemSection from './ItemSection';
+import Button from './Button';
 
 const ProductDetail = ({product}) => {
     const {name, company, image} = product;
