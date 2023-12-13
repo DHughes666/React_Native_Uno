@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 // Import libraries
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {ScrollView} from 'react-native';
 import axios from 'axios';
 
 import ProductDetail from './ProductDetail';
@@ -29,9 +29,9 @@ class CarList extends Component {
 
     render() {
         return (
-            <View>
+            <ScrollView>
                 {this.renderList()}
-            </View>
+            </ScrollView>
         );
     }
 }
