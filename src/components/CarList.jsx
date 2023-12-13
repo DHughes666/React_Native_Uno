@@ -4,6 +4,8 @@ import React, {Component} from 'react';
 import {Text, View} from 'react-native';
 import axios from 'axios';
 
+import ProductDetail from './ProductDetail';
+
 class CarList extends Component {
     constructor(){
         super();
@@ -21,7 +23,7 @@ class CarList extends Component {
 
     renderList = () => {
         return this.state.productList.map((item) => {
-            return <Text key={item.id}>{item.name}</Text>;
+            return <ProductDetail key={item.id} name={item.name} />;
         });
     };
 
